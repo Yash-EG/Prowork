@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<header class="">
+    <nav class="">
+        <img class="flex justify-start h-20 pl-16 pt-4 "   src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="" />
+        <ul class="flex justify-end mt-[-47px]">
+            <!-- <li class="flex justify-start h-24 px-4 py-2">
+                <img src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="" />
+            </li> -->
+            <li class="py-4 text-[20px] px-10  hover:cursor-pointer text-slate-200 hover:text-blue-300 pt-1">
+            <a href="/index.html">Home</a>
+            </li>
+            <li class="py-4 text-[20px] px-10 text-slate-200 hover:cursor-pointer  hover:text-blue-300 pt-1">
+                Contact Us
+            </li>
+            <li class="py-[4px] text-[20px] px-10 text-slate-200  hover:cursor-pointer">
+                <button
+                    class=" hover:text-blue-300 pb-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>                     
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body class="bg-[url('/photos/90555.jpg')] bg-cover overflow-x-hidden bg-fixed bg-no-repeat">
+    <div class="grid text-center items-center w-full ">
+        <div class="mt-32" >
+            <form>
+                <input id="inputField" class="bg-slate-200 w-1/3 p-3 rounded-full placeholder-violet-600 border-4 border-purple-500" type="text" placeholder="   ADD A TASK">
+                <button  type="button" id="addToDo" class="bg-blue-400 p-3 rounded-full ml-4 px-5 ">
+                    ADD
+                </button>
+            </form>
+        </div>
+        <div class="bg-[#a1dcf229] mt-10 rounded-xl text-white pb-14">
+            <div class="text-left px-8  mt-2 text-4xl font-semibold">
+                Your Work
+            </div>
+            <div class=" mt-4 px-8 flex">
+                <table class="w-full">
+                    <thead class="">
+                        <tr class="font-semibold text-2xl">
+                            <th class="text-left">Details</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="toDoContainer" class="">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="todolist.js"></script> 
+</body>
+</html>
