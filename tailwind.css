@@ -7,7 +7,9 @@
  @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Fasthand&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Ubuntu:wght@300&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
  #font {
       font-family: 'Ubuntu', sans-serif;
  }
@@ -19,4 +21,11 @@
  }
  #main{
      font-family: 'Playfair Display', serif;
+ }
+
+#nav{
+     font-family: 'Poppins', sans-serif;
+}
+ #down{
+     font-family: 'Poltawski Nowy', serif;
  }
