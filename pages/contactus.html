@@ -7,15 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Contact Us</title>
     <link rel="stylesheet" href="/tailwind.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
-<body  class="overflow-hidden">
-    <div class="bg-[url(/photos/90555.jpg)] bg-cover bg-no-repeat h-[100vh]">
-        <nav class="bg-transparent">
+<body  class="md:overflow-hidden overflow-x-hidden bg-[url(/photos/90555.jpg)] bg-cover bg-no-repeat md:h-[100vh]">
+    <div class="">
+        <!-- <nav class="bg-transparent">
             <img class="flex justify-start h-20 pl-16 pt-4 "   src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="" />
             <ul class="flex justify-end mt-[-47px]">
-                <!-- <li class="flex justify-start h-24 px-4 py-2">
-                    <img src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="" />
-                </li> -->
                 <li class="py-4 text-[20px] px-10  hover:cursor-pointer text-white hover:opacity-70 pt-1">
                 <a href="/index.html">Home</a>
                 </li>
@@ -31,14 +29,33 @@
                     </button>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
+        <header id="nav" class="">
+            <nav class="text-black flex justify-between items-center top-[-100%] w-[92%] mx-auto">
+                <div>
+                    <img class="w-56" src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="">
+                </div>
+                <div class="nav-links md:static absolute md:min-h-fit md:w-auto md:bg-transparent mt-8 rounded-lg bg-white bg-opacity-50 min-h-[30vh] w-full left-0 top-[-100%] flex items-center px-5">
+                    <ul class="flex md:flex-row md:pb-8 flex-col md:items-center  md:gap-16 gap-7">
+                        <a href=""><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">Home</li></a>
+                        <!-- <a href="/pages/contactus.html"><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">Contact</li></a> -->
+                        <a href="/pages/aboutus.html"><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">About</li></a>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a  href="/pages/login.html" class="text-white bg-red-500 rounded-xl px-3 py-2  hover:bg-red-600 hover:text-white">Login</a>
+                    <ion-icon onclick="onToggleMenu(this)" class="text-3xl text-white cursor-pointer md:hidden" name="menu"></ion-icon>
+                </div>
+                
+            </nav>
+        </header>
         <div class="text-center">
             <p class="pt-10 text-[40px] text-white" id="main">Contact Us</p>
-            <p class="text-white text-[19px]">Welcome to our Contact Us page! We're happy to hear from you and are eager to help you with any questions or concerns you may have.</p>
+            <p class="text-white md:text-[19px] text-sm sm:px-10">Welcome to our Contact Us page! We're happy to hear from you and are eager to help you with any questions or concerns you may have.</p>
         </div>
-        <div class="flex justify-center items-center px-32 pt-12 pb-32 h-[100vh]">
-            <div class="w-1/2 h-[100%]">
-                <div class="p-10 pt-32">
+        <div class="flex md:flex-row flex-col justify-center items-center md:px-32 md:pt-12 md:pb-32 h-[100vh]">
+            <div class="md:w-1/2 w-[100%] h-[100%] flex">
+                <div class="md:p-10 md:pt-28 px-16 pt-10">
                 <table border="1">
 
                     <tr class=""><td><svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffff" class="w-12 h-12">
@@ -77,9 +94,9 @@
                 </table>      
                 </div>                  
             </div>
-            <div class="w-1/2 h-[100%] p-10">
+            <div class="md:w-1/2 w-full h-[100%] p-10">
                 <div class="flex justify-start items-center w-full p-10">
-                    <p class="text-white  text-[25px] text-center w-[100%]">
+                    <p class="text-white  md:text-[25px] text-[20px] md:text-center w-[100%]  ">
                         Send Message
                     </p>
                 </div>
@@ -98,6 +115,19 @@
             </div>
             
         </div>
+        <footer>
+            <div class="bg-black text-slate-50 h-[4rem] w-full flex justify-center items-center">
+                Copyright notice: © 2023 Yash Patel. All rights reserved.
+            </div>
+        </footer>
+        <!-- Script for Navbar  -->
+    <script>
+        const navLinks=document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
 </body>
 
 </html>
