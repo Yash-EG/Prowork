@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About US</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 </head>
 <header class=""></header>
 
 <body class="overflow-x-hidden bg-[url('/photos/90555.jpg')] bg-cover">
-    <nav class="">
+    <!-- <nav class="">
         <img class="flex justify-start h-20 pl-16 pt-4" src="/logo/prowork-logo-zip-file/png/logo-no-background.png"
             alt="" />
         <ul class="flex justify-end mt-[-47px]">
-            <!-- <li class="flex justify-start h-24 px-4 py-2">
+            <li class="flex justify-start h-24 px-4 py-2">
                 <img src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="" />
-            </li> -->
+            </li> 
             <li class="py-4 text-[20px] px-10 hover:cursor-pointer text-slate-200 hover:text-blue-300 pt-1">
                 <a href="/index.html">Home</a>
             </li>
@@ -34,47 +36,66 @@
                 </button>
             </li>
         </ul>
-    </nav>
-    <div class="flex w-full">
-        <div class="min-h-screen w-[50%] text-white flex justify-center items-center">
+    </nav> -->
+    <header id="nav" class="">
+        <nav class="text-black flex justify-between items-center top-[-100%] w-[92%] mx-auto">
             <div>
-                <p class="px-24 text-[20px]">
+                <img class="w-56" src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="">
+            </div>
+            <div class="nav-links md:static absolute md:min-h-fit md:w-auto md:bg-transparent mt-8 rounded-lg bg-white bg-opacity-50 min-h-[30vh] w-full left-0 top-[-100%] flex items-center px-5">
+                <ul class="flex md:flex-row md:pr-24 md:pb-8 flex-col md:items-center  md:gap-16 gap-7">
+                    <a href=""><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">Home</li></a>
+                    <a href="/pages/terms.html"><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">Terms</li></a>
+                    <a href="/pages/aboutus.html"><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">About</li></a>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <a  href="/pages/login.html" class="text-white bg-red-500 rounded-xl px-3 py-2  hover:bg-red-600 hover:text-white">Login</a>
+                <ion-icon onclick="onToggleMenu(this)" class="text-3xl text-white cursor-pointer md:hidden" name="menu"></ion-icon>
+            </div>
+            
+        </nav>
+    </header>
+    <div class="flex md:flex-row flex-col w-full">
+        <div class="min-h-screen md:w-[50%] pt-10 text-white flex justify-center items-center">
+            <div>
+                <p class="md:px-24 px-10 text-[20px]">
                     Welcome to Prowork, the ultimate destination for all your to-do list
                     needs. Our mission is to help you organize your life, one task at a
                     time.
                 </p>
-                <p class="px-24 text-[20px] pt-3">
+                <p class="md:px-24 px-10 text-[20px] pt-3">
                     We understand how overwhelming it can be to keep track of all your
                     responsibilities, from work assignments to household chores to
                     personal goals. That's why we've created an intuitive, user-friendly
                     platform that makes it easy to stay on top of everything.
                 </p>
-                <p class="px-24 text-[20px] pt-3">
+                <p class="md:px-24 px-10 text-[20px] pt-3">
                     We is passionate about productivity and organization, and we're
                     constantly working to improve our service and make it even more
                     valuable to our users. We believe that everyone has the potential to
                     be their most productive self, and we're committed to providing the
                     tools and resources to make that a reality.
                 </p>
-                <p class="px-24 text-[20px] pt-3">
+                <p class="md:px-24 px-10 text-[20px] pt-3">
                     Whether you're a busy professional, a student with a packed
                     schedule, or just someone looking to get more done in less time,
                     we're here to help. Our to-do list platform is designed to be
                     flexible and customizable, so you can create lists that work for you
                     and your unique needs.
                 </p>
-                <p class="px-24 text-[20px] pt-3">
+                <p class="md:px-24 px-10 text-[20px] pt-3">
                     Thank you for choosing Prowork for all your to-do list needs. We're
                     excited to help you achieve your goals and stay on top of your busy
                     life!
                 </p>
             </div>
         </div>
-        <div class="h-screen w-[50%] flex justify-center items-center">
-            <div class="pr-24">
+        <div class="md:h-screen pt-10 md:w-[50%] flex justify-center items-center">
+            <div class="md:pr-24 px-5">
                 <img src="/photos/IMG_20230415_165238907.jpg" alt="" />
                 <div class="flex justify-center pt-10">
-                    <div class="pl-2 mix-blend-s">
+                    <div class="pl-2 mix-blend-s pb-10">
                         <a href="https://github.com/Yash-EG">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path
@@ -93,6 +114,13 @@
         </div>
     </div>
 </body>
+<script>
+    const navLinks=document.querySelector('.nav-links')
+    function onToggleMenu(e){
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[9%]')
+    }
+</script>
 <footer class="bg-transparent text-slate-50 h-[4rem] absolute w-full flex justify-center items-center">
     <div>Copyright notice: © 2023 Yash Patel. All rights reserved.</div>
 </footer>
