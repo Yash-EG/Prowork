@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODOLIST</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <header class="">
-    <nav class="">
+    <!-- <nav class="">
         <img class="flex justify-start h-20 pl-16 pt-4 "   src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="" />
         <ul class="flex justify-end mt-[-47px]">
-            <!-- <li class="flex justify-start h-24 px-4 py-2">
+            <li class="flex justify-start h-24 px-4 py-2">
                 <img src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="" />
-            </li> -->
+            </li> 
             <li class="py-4 text-[20px] px-10  hover:cursor-pointer text-white hover:opacity-70 pt-1">
             <a href="/index.html">Home</a>
             </li>
@@ -29,6 +30,27 @@
                 </button>
             </li>
         </ul>
+    </nav> -->
+    <nav class="text-black flex justify-between items-center top-[-100%] w-[92%] mx-auto">
+        <div>
+            <img class="w-56" src="/logo/prowork-logo-zip-file/png/logo-no-background.png" alt="">
+        </div>
+        <div class="nav-links md:static absolute md:min-h-fit md:w-auto md:bg-transparent mt-8 rounded-lg bg-white bg-opacity-90 min-h-[30vh] w-full left-0 top-[-100%] flex items-center px-5">
+            <ul class="flex md:flex-row md:pr-24 md:pb-8 flex-col md:items-center  md:gap-16 gap-7">
+                <a href="/pages/indexlogin.html"><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">Home</li></a>
+                <a href="/pages/terms.html"><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">Terms</li></a>
+                <a href="/pages/aboutuslogin.html"><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">About</li></a>
+                <a href="/pages/contactuslogin.html"><li class="text-[20px] px-5 text-black md:text-white hover:cursor-pointer hover:opacity-70 ">Contact</li></a>
+            </ul>
+        </div>
+        <div class="flex items-center gap-6">
+            <!-- <a  href="/pages/login.html" class="text-white bg-red-500 rounded-xl px-3 py-2  hover:bg-red-600 hover:text-white">Login</a> -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path class="text-white hover:opacity-70" stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <ion-icon onclick="onToggleMenu(this)" class="text-3xl text-white cursor-pointer md:hidden" name="menu"></ion-icon>
+        </div>
+        
     </nav>
 </header>
 <body class="bg-[url('/photos/90555.jpg')] bg-cover overflow-x-hidden bg-fixed bg-no-repeat">
@@ -60,5 +82,13 @@
         </div>
     </div>
     <script src="todolist.js"></script> 
+     <!-- Script for Navbar  -->
+     <script>
+        const navLinks=document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
 </body>
 </html>

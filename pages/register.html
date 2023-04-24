@@ -16,15 +16,27 @@
         <form action="">
             <div>
                 <input type="text" placeholder="Username" class="rounded-[7px] text-[20px] bg-transparent border-[1px] border-white pl-3">
+                <div class="pt-3 hidden">
+                    <span class="">Field is empty</span>
                 </div>
+            </div>
             <div class="pt-[20px]">
             <input type="text" placeholder=" Email" class="rounded-[7px] text-[20px] bg-transparent border-[1px] border-white pl-3">
+            <div class="pt-3 hidden">
+                <span class="">Enter a valid email</span>
+            </div>
             </div>
             <div class="pt-[20px]">
             <input type="password" placeholder=" Password"  class="rounded-[7px] text-[20px] bg-transparent border-[1px] border-white pl-3">
+            <div class="pt-3 hidden">
+                <span class="">Password must contain atleast 8 characters</span>
+            </div>
             </div>
             <div class="pt-[20px]">
                 <input type="password" placeholder=" Confirm Password"  class="rounded-[7px] text-[20px] bg-transparent border-[1px] border-white pl-3">
+                <div class="pt-3 hidden">
+                    <span class="">Doesn't Match</span>
+                </div>
                 </div><br>
             <div>
             <button class="bg-white opacity-[.6] text-bl px-8 py-3 rounded-3xl text-black hover:bg-blue-200 hover:text-[#022052]">Create your account</button>
@@ -40,5 +52,9 @@
     </div>
     </section>
     </div>
+    <script>
+        const form = document.querySelector("form"),
+        emailField = form.querySelector(".email-field")
+    </script>
 </body>
 </html>
