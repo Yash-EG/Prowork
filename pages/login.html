@@ -16,15 +16,15 @@
             <span class="text-[30px] font-semibold text-center">Login</span>
             <p class="p-3">If you are already a member, easily log in</p>
             <br>
-            <form action="/pages/todolist.html">
+            <form>
               <div>
-              <input type="text" placeholder=" Email" class="rounded-[7px] text-[20px] bg-transparent border-[1px] border-white pl-3">
+              <input id="email" type="text" placeholder=" Email" class="rounded-[7px] text-[20px] bg-transparent border-[1px] border-white pl-3">
               </div>
               <div class="pt-[20px]">
-              <input type="password" placeholder=" Password" class="rounded-[7px] text-[20px] bg-transparent border-[1px] border-white pl-3">
+              <input id="password" type="password" placeholder=" Password" class="rounded-[7px] text-[20px] bg-transparent border-[1px] border-white pl-3">
               </div><br>
               <div class="flex justify-center items-center">
-                <button class="bg-white text-black opacity-[.6] px-8 py-3 rounded-3xl  hover:bg-blue-200 hover:text-[#022052] border-">Sign in</button>
+                <button onclick="validate()" class="bg-white text-black opacity-[.6] px-8 py-3 rounded-3xl  hover:bg-blue-200 hover:text-[#022052] border-">Sign in</button>
               </div>
               <div class="pt-5"> <a href="">Forgot Password?</a></div>
               <div> <a href="register.html">Create an account</a></div>
@@ -41,10 +41,25 @@
             </form>
           </div>
           <div class="md:w-1/2 md:flex md:items-center md:justify-center md:p-2 hidden">
-            <img src="/photos/peter-gargiulo-cGNCepznaV8-unsplash.jpg" alt="" class="h-[68vh] rounded-2xl">
+            <img src="https://media.giphy.com/media/4xWGyVKoXqg2eVCiq9/giphy.gif" alt="" class="h-[68vh] rounded-2xl opacity-70">
           </div>
         </div>
       </section>
     </div>
   </body>
+  <script>
+    function validate(){
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      if(email == ""){
+        alert("Please enter your email");
+      }
+      else if(password == ""){
+        alert("Please enter your password");
+      }
+      else{
+        window.open("todolist.html","_self")
+      }
+    }
+  </script>
 </html>
